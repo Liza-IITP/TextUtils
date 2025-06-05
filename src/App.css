@@ -1,0 +1,215 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.navbar-brand {
+  font-size: 2.5rem;
+  font-weight:800;
+  color: #000000;
+  text-decoration: none;
+}
+.nav-item {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000000;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+:root {
+  --primary-color: #6366f1;
+  --primary-bg: #6366f110;
+}
+
+body {
+  background: linear-gradient(135deg, var(--primary-bg) 0%, #97aaeb 100%);
+  min-height: 100vh;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background 0.4s;
+}
+
+.card,
+.card-body,
+.shadow,
+.shadow-sm {
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 24px rgba(60, 72, 88, 0.08), 0 1.5px 4px rgba(60, 72, 88, 0.04);
+  transition: box-shadow 0.3s, border-color 0.3s;
+  border: 1.5px solid var(--primary-color, #6366f1);
+}
+
+textarea.form-control {
+  transition: box-shadow 0.2s, border-color 0.2s;
+  border-color: var(--primary-color, #6366f1);
+}
+
+textarea.form-control:focus {
+  box-shadow: 0 0 0 2px var(--primary-color, #6366f1);
+  border-color: var(--primary-color, #6366f1);
+}
+
+.btn-primary, .btn-success, .btn-warning, .btn-danger, .btn-secondary {
+  background: var(--primary-color, #6366f1) !important;
+  border-color: var(--primary-color, #6366f1) !important;
+  color: #fff !important;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover, .btn:focus {
+  filter: brightness(0.95);
+  box-shadow: 0 2px 8px rgba(60, 72, 88, 0.10);
+}
+.color-palette {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0.7rem 0.7rem 0.7rem 0.7rem;
+  background: rgba(255, 247, 157, 0.92);
+  border-bottom: 2px solid var(--primary-color, #6366f1);
+  box-shadow: 0 2px 12px rgba(60,72,88,0.07);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.3s, box-shadow 0.3s;
+  box-sizing: border-box;
+  width: 70%;
+  height: 50px;
+  margin-right: 2.5rem;
+}
+
+.color-swatch {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 3.5px solid #fff;
+  box-shadow: 0 2px 8px rgba(60,72,88,0.13);
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.18s, border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+  position: relative;
+}
+
+.color-swatch.selected,
+.color-swatch:focus {
+  border-color: var(--primary-color, #6366f1);
+  box-shadow: 0 0 0 3px var(--primary-color, #6366f1), 0 2px 8px rgba(60,72,88,0.13);
+  z-index: 1;
+}
+
+.color-swatch:hover {
+  transform: scale(1.13);
+  border-color: #6366f1;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color, #6366f1);
+  border-radius: 8px;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #6366f1;
+  text-decoration: underline;
+}
+
+.blank {
+  color: rgb(32, 8, 246);
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.about-card {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+  padding: 2.5rem 2rem;
+  border: 3px solid var(--primary-color, #6366f1);
+  border-radius: 1.3rem;
+  background: var(--primary-bg, #fff);
+  box-shadow: 0 8px 32px rgba(60,72,88,0.13), 0 1.5px 4px rgba(60,72,88,0.07);
+  transition: background 0.3s, box-shadow 0.3s, border-color 0.3s;
+  max-width: 900px;
+}
+
+.accordion-item {
+  border-radius: 0.9rem !important;
+  margin-bottom: 1.2rem;
+  border: 2px solid var(--primary-color, #6366f1) !important;
+  box-shadow: 0 2px 12px rgba(60,72,88,0.09);
+  transition: box-shadow 0.2s, background 0.2s, border-color 0.3s;
+  background: inherit;
+}
+
+.accordion-button {
+  font-weight: 600;
+  font-size: 1.13rem;
+  border-radius: 0.9rem !important;
+  transition: background 0.2s, color 0.2s;
+  background: inherit;
+  color: inherit;
+  box-shadow: none !important;
+  outline: none !important;
+  border: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: var(--primary-color, #6366f1);
+  background-color: var(--primary-bg, rgba(99,102,241,0.09));
+  box-shadow: none;
+}
+
+.accordion-button:focus {
+  border-color: var(--primary-color, #6366f1);
+  box-shadow: 0 0 0 2px var(--primary-color, #6366f1, 0.2);
+}
+
+.accordion-body {
+  font-size: 1.04rem;
+  line-height: 1.7;
+  background: transparent;
+  color: inherit;
+  padding: 1.1rem 1.3rem;
+  border-radius: 0 0 0.9rem 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+@media (max-width: 600px) {
+  .about-card {
+    padding: 1.2rem 0.5rem;
+  }
+}
