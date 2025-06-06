@@ -25,8 +25,6 @@ export default function TextForm(props) {
         // console.log("On change");
         setText(event.target.value)
     }
-
-    // Credits: A
     const handleCopy = () => {
         console.log("I am copy");
         var text = document.getElementById("myBox");
@@ -36,7 +34,6 @@ export default function TextForm(props) {
         props.showAlert("Copied to Clipboard!", "success");
     }
 
-    // Credits: Coding Wala
     const handleExtraSpaces = () => {
         let newText = text.split(/[ ]+/);
         setText(newText.join(" "));
